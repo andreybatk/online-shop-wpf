@@ -3,7 +3,6 @@ using System.Data;
 using System.Data.OleDb;
 using System.Data.SqlClient;
 using System.Diagnostics;
-using System.Dynamic;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;

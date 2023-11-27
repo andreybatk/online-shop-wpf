@@ -1,13 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Input;
-using System.Windows;
+﻿using System.Data;
 using OnlineShop.ViewModels.Base;
-using OnlineShop.Views.Windows;
 
 namespace OnlineShop.ViewModels
 {
