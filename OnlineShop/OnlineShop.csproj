@@ -12,8 +12,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="System.Data.OleDb" Version="8.0.0" />
-    <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DataBaseFirst\DataBaseFirst.csproj" />
+  </ItemGroup>
 </Project>

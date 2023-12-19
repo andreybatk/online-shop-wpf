@@ -21,15 +21,30 @@
         </Grid.RowDefinitions>
         <StackPanel Grid.Column="0" Grid.Row="0">
             <Button Content="Таблица товаров" Command="{Binding ClientsProductsCommand}"/>
-            <TextBlock Text="MSSQL Connection:"/>
-            <TextBlock Text="{Binding MsSqlInfo}"/>
-            <TextBlock Text="MSACCESS Connection:"/>
-            <TextBlock Text="{Binding MsAccessInfo}"/>
         </StackPanel>
-        <DataGrid Grid.Column="1" Grid.Row="0" Grid.RowSpan="3" ItemsSource = "{Binding DataView}"
+        <ListView Grid.Column="1" Grid.Row="0" Grid.RowSpan="3" ItemsSource="{Binding ClientsList}"
+                  SelectedItem="{Binding ClientsListSelectedItem}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="ID" DisplayMemberBinding="{Binding ID}"/>
+                    <GridViewColumn Header="FirstName" DisplayMemberBinding="{Binding FirstName}"/>
+                    <GridViewColumn Header="LastName" DisplayMemberBinding="{Binding LastName}"/>
+                    <GridViewColumn Header="PhoneNumber" DisplayMemberBinding="{Binding PhoneNumber}"/>
+                    <GridViewColumn Header="Email" DisplayMemberBinding="{Binding Email}"/>
+                </GridView>
+            </ListView.View>
+            <ListView.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Товары клиента" Command ="{Binding ClientProductsCommand}"/>
+                    <MenuItem Header="Добавить клиента" Command ="{Binding AddClientCommand}"/>
+                    <MenuItem Header="Удалить клиента" Command= "{Binding DeleteClientCommand}"/>
+                </ContextMenu>
+            </ListView.ContextMenu>
+        </ListView>
+        <!--<DataGrid Grid.Column="1" Grid.Row="0" Grid.RowSpan="3" ItemsSource = "{Binding ClientsList}"
                   SelectedItem="{Binding Path=MainWindowSelectedItem}"
                   IsSynchronizedWithCurrentItem="True">
-            <!--CurrentCell="{Binding CellInfo, Mode=OneWayToSource}"-->
+            CurrentCell="{Binding CellInfo, Mode=OneWayToSource}"
             <DataGrid.ContextMenu>
                 <ContextMenu>
                     <MenuItem Header="Товары клиента" Command ="{Binding ClientProductsCommand}"/>
@@ -37,6 +52,6 @@
                     <MenuItem Header="Удалить клиента" Command= "{Binding DeleteClientCommand}"/>
                 </ContextMenu>
             </DataGrid.ContextMenu>
-        </DataGrid>
+        </DataGrid>-->
     </Grid>
 </Window>

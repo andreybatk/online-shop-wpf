@@ -8,9 +8,15 @@
         Title="Таблица товаров"
         SizeToContent="WidthAndHeight" WindowStartupLocation="CenterOwner">
     <Grid>
-        <DataGrid
-                  AutoGenerateColumns="True" 
-                  ItemsSource="{Binding ClientsProductsDataView}">
-        </DataGrid>
+        <ListView ItemsSource="{Binding ClientsProducts}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="ID" DisplayMemberBinding="{Binding ID}"/>
+                    <GridViewColumn Header="Email" DisplayMemberBinding="{Binding Email}"/>
+                    <GridViewColumn Header="ProductID" DisplayMemberBinding="{Binding ProductID}"/>
+                    <GridViewColumn Header="ProductName" DisplayMemberBinding="{Binding ProductName}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
     </Grid>
 </Window>

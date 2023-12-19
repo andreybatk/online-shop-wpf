@@ -10,7 +10,7 @@
     <Grid>
         <DataGrid
                   AutoGenerateColumns="True" 
-                  ItemsSource="{Binding ClientProductsDataView}">
+                  ItemsSource="{Binding ClientProducts}">
         </DataGrid>
     </Grid>
 </Window>

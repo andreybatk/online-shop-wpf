@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34302.85
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineShop", "OnlineShop\OnlineShop.csproj", "{D12211EC-4DE8-4105-9827-B614464EAC03}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineShop", "OnlineShop\OnlineShop.csproj", "{D12211EC-4DE8-4105-9827-B614464EAC03}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBaseFirst", "DataBaseFirst\DataBaseFirst.csproj", "{7FEEE028-8E56-4BEB-B3DE-9F9484E19704}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{D12211EC-4DE8-4105-9827-B614464EAC03}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D12211EC-4DE8-4105-9827-B614464EAC03}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D12211EC-4DE8-4105-9827-B614464EAC03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FEEE028-8E56-4BEB-B3DE-9F9484E19704}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FEEE028-8E56-4BEB-B3DE-9F9484E19704}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FEEE028-8E56-4BEB-B3DE-9F9484E19704}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FEEE028-8E56-4BEB-B3DE-9F9484E19704}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

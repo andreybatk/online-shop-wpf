@@ -1,21 +1,21 @@
-﻿using System;
-using System.Data;
-using System.Windows;
-using System.Windows.Input;
+﻿using DataBaseFirst;
 using OnlineShop.Infrastructure.Commands;
 using OnlineShop.ViewModels.Base;
 using OnlineShop.Views.Windows;
+using System;
+using System.Windows;
+using System.Windows.Input;
 
 namespace OnlineShop.ViewModels
 {
     internal class AddClientViewModel : ViewModel
     {
-        private DataRow _row;
         private AddClient _addClient;
-        public AddClientViewModel(AddClient addClient, DataRow row)
+        private Clients _client;
+        public AddClientViewModel(AddClient addClient, Clients client)
         {
+            this._client = client;
             this._addClient = addClient;
-            this._row = row;
             OkCommand = new RelayCommand(OnOkCommandExecuted, CanOkCommandExecute);
         }
         public string FirstName { get; set; }
@@ -38,11 +38,11 @@ namespace OnlineShop.ViewModels
         {
             try
             {
-                _row["FirstName"] = FirstName;
-                _row["SecondName"] = SecondName;
-                _row["LastName"] = LastName;
-                _row["PhoneNumber"] = PhoneNumber;
-                _row["Email"] = Email;
+                _client.FirstName = FirstName;
+                _client.SecondName = SecondName;
+                _client.LastName = LastName;
+                _client.PhoneNumber = PhoneNumber;
+                _client.Email = Email;
 
                 _addClient.DialogResult = true;
             }

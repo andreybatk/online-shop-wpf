@@ -1,17 +1,18 @@
-﻿using System.Data;
+﻿using DataBaseFirst;
 using OnlineShop.ViewModels.Base;
+using System.Collections.Generic;
 
 namespace OnlineShop.ViewModels
 {
     internal class ClientProductsViewModel : ViewModel
     {
-        private DataView _dataView;
+        private List<Products> _productsList;
 
-        public ClientProductsViewModel(DataView dataView)
+        public ClientProductsViewModel(List<Products> productsList)
         {
-            this._dataView = dataView;
+            this._productsList = productsList;
         }
 
-        public DataView ClientProductsDataView { get => _dataView; set => Set(ref _dataView, value); }
+        public List<Products> ClientProducts { get => _productsList; set => Set(ref _productsList, value); }
     }
 }
