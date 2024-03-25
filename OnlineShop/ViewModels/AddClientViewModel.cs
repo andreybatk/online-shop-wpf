@@ -12,12 +12,14 @@ namespace OnlineShop.ViewModels
     {
         private AddClient _addClient;
         private Clients _client;
+
         public AddClientViewModel(AddClient addClient, Clients client)
         {
             this._client = client;
             this._addClient = addClient;
             OkCommand = new RelayCommand(OnOkCommandExecuted, CanOkCommandExecute);
         }
+
         public string FirstName { get; set; }
         public string SecondName { get; set; }
         public string LastName { get; set; }
@@ -27,7 +29,7 @@ namespace OnlineShop.ViewModels
 
         private bool CanOkCommandExecute(object p)
         {
-            if(String.IsNullOrWhiteSpace(FirstName) || String.IsNullOrWhiteSpace(SecondName)
+            if (String.IsNullOrWhiteSpace(FirstName) || String.IsNullOrWhiteSpace(SecondName)
                 || String.IsNullOrWhiteSpace(LastName) || String.IsNullOrWhiteSpace(Email))
             {
                 return false;
@@ -50,7 +52,6 @@ namespace OnlineShop.ViewModels
             {
                 MessageBox.Show(ex.Message, "Ошибка!");
             }
-            
         }
     }
 }

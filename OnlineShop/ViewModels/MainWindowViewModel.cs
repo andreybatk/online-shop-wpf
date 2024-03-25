@@ -31,11 +31,11 @@ namespace OnlineShop.ViewModels
 
         public BindingList<Clients> ClientsList { get => _clientsList; set => Set(ref _clientsList, value); }
         public Clients ClientsListSelectedItem { get => _currentClient; set => Set(ref _currentClient, value); }
-
         public ICommand AddClientCommand { get; }
         public ICommand DeleteClientCommand { get; }
         public ICommand ClientsProductsCommand { get; }
         public ICommand ClientProductsCommand { get; }
+
         private void Preparing()
         {
             dbContext.Clients.Load();
